@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>361274521688-mquoda1kao5t7j90koqg2tq0aokud1ah.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.361274521688-mquoda1kao5t7j90koqg2tq0aokud1ah</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDZ_-gzKp02M77hYMTM1OlasJkMx7H61cY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>361274521688</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.dangoz.dangozapp</string>
+	<key>PROJECT_ID</key>
+	<string>dangozapp-b4543</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dangozapp-b4543.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:361274521688:ios:f0503bc61fd96dfb49322d</string>
+</dict>
+</plist>
