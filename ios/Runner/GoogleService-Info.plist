@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>361274521688-mquoda1kao5t7j90koqg2tq0aokud1ah.apps.googleusercontent.com</string>
+	<string>361274521688-on8cqk3jlf3p4p0hfptmm1nqr86r2enc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.361274521688-mquoda1kao5t7j90koqg2tq0aokud1ah</string>
+	<string>com.googleusercontent.apps.361274521688-on8cqk3jlf3p4p0hfptmm1nqr86r2enc</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>361274521688-6skl0iiii2o2417tl64kjvasrfaondnn.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDZ_-gzKp02M77hYMTM1OlasJkMx7H61cY</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.dangoz.dangozapp</string>
+	<string>com.example.dangoz</string>
 	<key>PROJECT_ID</key>
 	<string>dangozapp-b4543</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:361274521688:ios:f0503bc61fd96dfb49322d</string>
+	<string>1:361274521688:ios:492dc1fb41677cd649322d</string>
 </dict>
 </plist>

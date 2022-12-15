@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -20,6 +22,17 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.361274521688-on8cqk3jlf3p4p0hfptmm1nqr86r2enc</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -43,7 +56,15 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo Library Use For Profile Picture And Posts And Chat</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Access Camera For Taking Profile Pictures And Posts And Chat</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Access Mic For Taking Videos For Posts And Audio Chat</string>
+	<key>NSContactsUsageDescription</key>
+    <string>Dangoz Provides Ability To Find Friends By Phone Number</string>
+	<key>NSAppleMusicUsageDescription</key>
+    <string>Allow Users To Hear Audio Recordings</string>
 </dict>
 </plist>

@@ -1,13 +1,18 @@
 import 'dart:io';
 
-import 'package:dangoz/screens/auth/login_screen.dart';
-import 'package:dangoz/screens/auth/signup_screen.dart';
-import 'package:dangoz/screens/gigs/add_gig_screen.dart';
-import 'package:dangoz/screens/intro_screen.dart';
-import 'package:dangoz/screens/navbar_screen.dart';
-import 'package:dangoz/screens/notifications/user_notifications_screen.dart';
-import 'package:dangoz/screens/profile/user_profile_screen.dart';
+import 'package:dangoz/base/app_colors.dart';
+import 'package:dangoz/features/auth/controller/auth_controller.dart';
+import 'package:dangoz/features/auth/login_screen.dart';
+import 'package:dangoz/features/auth/signup_screen.dart';
+import 'package:dangoz/features/intro_screen.dart';
+import 'package:dangoz/features/navbar_screen.dart';
+import 'package:dangoz/features/notifications/user_notifications_screen.dart';
+import 'package:dangoz/firebase_options.dart';
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -19,22 +24,44 @@ class MyHttpOverrides extends HttpOverrides {
   }
 }
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   HttpOverrides.global = MyHttpOverrides();
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GetMaterialApp(
       initialRoute: '/',
       defaultTransition: Transition.cupertino,
       debugShowCheckedModeBanner: false,
       title: 'Ability Consultancy',
+      home: ref.watch(userDataAuthProvider).when(
+        data: (user) {
+          if (user == null) {
+            return const IntroScreen();
+          }
+          return const NavbarScreen();
+        },
+        error: (err, trace) {
+          return Container(
+            child: Text(err.toString()),
+          );
+        },
+        loading: () {
+          return Center(
+            child: SpinKitCubeGrid(color: AppColors.navy),
+          );
+        },
+      ),
       getPages: [
         GetPage(
           name: '/',
@@ -53,16 +80,8 @@ class MyApp extends StatelessWidget {
           page: () => const NavbarScreen(),
         ),
         GetPage(
-          name: '/addGigScreen',
-          page: () => const AddGigScreen(),
-        ),
-        GetPage(
           name: '/userNotificationsScreen',
           page: () => const UserNotificationsScreen(),
-        ),
-        GetPage(
-          name: '/userProfileScreen',
-          page: () => UserProfileScreen(),
         ),
       ],
     );

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "361274521688",
+    "project_id": "dangozapp-b4543",
+    "storage_bucket": "dangozapp-b4543.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361274521688:android:191b5ac4b99b0bcc49322d",
+        "android_client_info": {
+          "package_name": "com.example.dangoz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361274521688-6skl0iiii2o2417tl64kjvasrfaondnn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dangoz",
+            "certificate_hash": "b7f79aa0d87ce0ca770ad99741b64d93df7be058"
+          }
+        },
+        {
+          "client_id": "361274521688-u7a95b191r950tfhcuirqm5k8g56nlrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUssmQLeImGaoey3W6EkGKk8ACOe8OC88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361274521688-u7a95b191r950tfhcuirqm5k8g56nlrr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "361274521688-mquoda1kao5t7j90koqg2tq0aokud1ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dangoz.dangozapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
